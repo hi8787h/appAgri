@@ -20,7 +20,18 @@ jobs:
       - name: Login via Azure CLI
         uses: azure/login@v1
         with: 
-          creds: ${{ secret.AZURE_CREDENTIALS }}
+          creds: ${{ {
+  "clientId": "cb06aa9a-306a-4eea-8357-1a540e9581e5",
+  "clientSecret": "_Hm8Q~BuXzxh~PpAtSezSJ_JzU0AoZnT90K_LdnV",
+  "subscriptionId": "14af92eb-501b-48db-94f3-a19f7b234f0f",
+  "tenantId": "1175eeca-f575-4f04-81d4-5f99321d021a",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+ }}
       
       - name: SETUP .NET CORE
         uses: actions/setup-dotnet@v1
